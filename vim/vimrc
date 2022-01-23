@@ -9,11 +9,17 @@ set noerrorbells
 set expandtab
 set shiftwidth=2
 set tabstop=2
-set colorcolumn=80
+set colorcolumn=84
 set smarttab
 set autoindent
 set smartindent
+
+" Search
 set incsearch
+set hlsearch
+set lazyredraw
+set showmatch
+set mat=2
 
 set hidden
 set signcolumn=yes
@@ -55,15 +61,41 @@ vnoremap > >gv
 " Insert mode shortcut
 imap ;; <Esc>A;<Esc>
 
+nnoremap B ^
+nnoremap E $
+
 " Gui mode
 "
-set guifont=consolas:h10
+set guifont=consolas:h11
 set novisualbell
+set lines=28
+set columns=100
+set t_Co=256
+set ttyfast
+set showmode
+set showcmd
+
+if has('termguicolor')
+  set termguicolors
+endif
 
 " ===== Plugins =====
 "
 call plug#begin()
-source "~/.vim/plugins/dracula.vim"
+source ~/.vim/plugins/surround.vim
+source ~/.vim/plugins/commentary.vim
+source ~/.vim/plugins/vim-repeat.vim
+source ~/.vim/plugins/emmet.vim
+source ~/.vim/plugins/quick-scope.vim
+source ~/.vim/plugins/lightline.vim
+source ~/.vim/plugins/fzf.vim
+
+if has('nvim')
+  source ~/.vim/nvim.vim
+endif
+
+" Colorscheme of choice
+source ~/.vim/plugins/dracula.vim
 call plug#end()
 
 doautocmd User PlugLoaded
