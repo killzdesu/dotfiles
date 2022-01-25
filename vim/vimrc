@@ -61,6 +61,8 @@ vnoremap > >gv
 " Insert mode shortcut
 imap ;; <Esc>A;<Esc>
 
+" Insert mode block
+
 nnoremap B ^
 nnoremap E $
 
@@ -88,6 +90,7 @@ source ~/.vim/plugins/vim-repeat.vim
 source ~/.vim/plugins/emmet.vim
 source ~/.vim/plugins/quick-scope.vim
 source ~/.vim/plugins/lightline.vim
+" source ~/.vim/plugins/floaterm.vim
 source ~/.vim/plugins/fzf.vim
 
 if has('nvim')
