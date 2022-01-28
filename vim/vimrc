@@ -50,7 +50,8 @@ let mapleader = "\\"
 nmap <leader>ve :e $MYVIMRC<CR>
 nmap <leader>vr :source $MYVIMRC<CR>
 map <C-c> <Esc>
-nmap <leader><Space> :nohlsearch<CR>
+nmap <silent> <leader><Space> :let @/ = ""<CR>
+
 
 map gf :edit <cfile><CR>
 
@@ -61,24 +62,34 @@ vnoremap > >gv
 " Insert mode shortcut
 imap ;; <Esc>A;<Esc>
 
-" Insert mode block
-
 nnoremap B ^
 nnoremap E $
 
 " Gui mode
 "
-set guifont=consolas:h11
-set novisualbell
-set lines=28
-set columns=100
-set t_Co=256
-set ttyfast
-set showmode
-set showcmd
 
-if has('termguicolor')
-  set termguicolors
+if has('gui_running') || exists('GuiFont') || exists('g:gonvim_running')
+  " set guifont=consolas:h11
+  " set guifont=Consolas\ NF:h11
+  set guifont=FiraCode\ NF:h10.5
+  set mouse=a
+  set novisualbell
+  " set lines=28
+  " set columns=100
+  set ttyfast
+  set showmode
+  set showcmd
+  set laststatus=2
+else
+  set t_Co=256
+  if has('termguicolor')
+    set termguicolors
+  endif
+endif
+
+" Neovim config
+if has('nvim')
+  " set clipboard^=unnamed,unnamedplus
 endif
 
 " ===== Plugins =====
@@ -89,12 +100,12 @@ source ~/.vim/plugins/commentary.vim
 source ~/.vim/plugins/vim-repeat.vim
 source ~/.vim/plugins/emmet.vim
 source ~/.vim/plugins/quick-scope.vim
-source ~/.vim/plugins/lightline.vim
+source ~/.vim/plugins/statusline.vim
 " source ~/.vim/plugins/floaterm.vim
 source ~/.vim/plugins/fzf.vim
 
 if has('nvim')
-  source ~/.vim/nvim.vim
+  source ~/.vim/nvim-plugins.vim
 endif
 
 " Colorscheme of choice
@@ -102,3 +113,4 @@ source ~/.vim/plugins/dracula.vim
 call plug#end()
 
 doautocmd User PlugLoaded
+" source ~/.vim/lua/telescope.lua
