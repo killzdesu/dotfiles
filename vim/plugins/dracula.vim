@@ -1,11 +1,11 @@
-Plug 'dracula/vim', { 'as': 'dracula' }
-if has('nvim')
+if !has('nvim')
+  Plug 'dracula/vim', { 'as': 'dracula' }
+  let g:lightline = {'colorscheme' : 'dracula'}
+else
   Plug 'Mofiqul/dracula.nvim'
 endif
 
-let g:lightline = {'colorscheme' : 'dracula'}
-
-augroup DraculaOverrides
-  autocmd!
-  autocmd User PlugLoaded ++nested colorscheme dracula
-augroup end
+" augroup DraculaOverrides
+"   autocmd!
+"   autocmd User PlugLoaded ++nested colorscheme dracula
+" augroup end

@@ -28,5 +28,3 @@ endif
 source ~/.vim/plugins/dracula.vim
 
 call plug#end()
-
-doautocmd User PlugLoaded
