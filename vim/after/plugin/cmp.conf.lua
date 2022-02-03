@@ -3,6 +3,7 @@ if (not status) then return end
 
 vim.o.completeopt = "menu,menuone,noselect"
 
+local lspkind = require('lspkind')
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -41,6 +42,12 @@ cmp.setup {
     { name = 'nvim_lsp' },
     { name = 'buffer' },
     -- { name = 'luasnip' },
+  },
+  formatting = {
+    format = lspkind.cmp_format({
+      with_text = false,
+      maxwidth = 50,
+    })
   },
 
   vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]

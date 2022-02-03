@@ -25,4 +25,8 @@ else
 
 endif
 
+set mouse=a
 set termguicolors
+" Set italics
+set t_ZH=^[[3m
+set t_ZR=^[[23m

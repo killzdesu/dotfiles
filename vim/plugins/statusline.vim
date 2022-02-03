@@ -6,5 +6,4 @@ if !has('nvim')
 
 else
   Plug 'nvim-lualine/lualine.nvim'
-  Plug 'kyazdani42/nvim-web-devicons'
 endif

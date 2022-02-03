@@ -8,7 +8,7 @@ map <C-c> <Esc>
 nmap <silent> <leader><Space> :let @/ = ""<CR>
 
 
-map gf :edit <cfile><CR>
+map <silent>gf :edit <cfile><CR>
 
 " Reselect visual after indenting
 vnoremap < <gv

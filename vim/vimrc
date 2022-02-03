@@ -12,13 +12,15 @@ endif
 call plug#begin()
 
 source ~/.vim/plugins/surround.vim
+source ~/.vim/plugins/target.vim
 source ~/.vim/plugins/commentary.vim
 source ~/.vim/plugins/vim-repeat.vim
 source ~/.vim/plugins/emmet.vim
 source ~/.vim/plugins/quick-scope.vim
 source ~/.vim/plugins/statusline.vim
 source ~/.vim/plugins/fzf.vim
-source ~/.vim/plugins/colorizer.vim
+source ~/.vim/plugins/tree.vim
+" source ~/.vim/plugins/colorizer.vim
 
 if has('nvim')
   source ~/.vim/nvim-plugins.vim
@@ -26,5 +28,8 @@ endif
 
 " Colorscheme of choice
 source ~/.vim/plugins/dracula.vim
+source ~/.vim/plugins/sonokai.vim
 
 call plug#end()
+
+doautocmd User PlugLoaded
