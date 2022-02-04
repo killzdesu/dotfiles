@@ -28,7 +28,7 @@ endif
 
 " Colorscheme of choice
 source ~/.vim/plugins/dracula.vim
-source ~/.vim/plugins/sonokai.vim
+" source ~/.vim/plugins/sonokai.vim
 
 call plug#end()
 

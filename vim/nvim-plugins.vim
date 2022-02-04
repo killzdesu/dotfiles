@@ -5,12 +5,16 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'glepnir/lspsaga.nvim'
+" Plug 'williamboman/nvim-lsp-installer'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'onsails/lspkind-nvim'
+
+Plug 'folke/trouble.nvim'
+
+" Unused plugins
+" Plug 'glepnir/lspsaga.nvim'
 
 " Install LSP via npm
 " TSX+JS: npm install -g typescript typescript-language-server
