@@ -13,6 +13,9 @@ Plug 'onsails/lspkind-nvim'
 
 Plug 'folke/trouble.nvim'
 
+" Smooth nvim scroll
+Plug 'karb94/neoscroll.nvim'
+
 " Unused plugins
 " Plug 'glepnir/lspsaga.nvim'
 

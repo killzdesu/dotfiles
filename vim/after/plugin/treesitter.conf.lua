@@ -10,7 +10,7 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = true,
   },
   indent = {
-    enable = false, -- Experimental feature
+    enable = true, -- Experimental feature
     disable = {},
   },
   -- ts-context-commentstring integration

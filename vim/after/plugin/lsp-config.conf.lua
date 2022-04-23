@@ -37,7 +37,7 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local servers = { 'vimls', 'sumneko_lua' }
+local servers = { 'vimls', 'sumneko_lua', 'pylsp', 'svelte' }
 for _, lsp in pairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -75,7 +75,8 @@ local function on_new_config(new_config, new_root_dir)
   local function get_typescript_server_path(root_dir)
     local project_root = lspconfig_util.find_node_modules_ancestor(root_dir)
     return project_root and (lspconfig_util.path.join(project_root, 'node_modules', 'typescript', 'lib', 'tsserverlibrary.js'))
-      or ''
+    -- global directory
+      or 'C:/Users/Jui/AppData/Roaming/npm/node_modules/typescript/lib/tsserverlibrary.js'
   end
 
   if
@@ -87,7 +88,7 @@ local function on_new_config(new_config, new_root_dir)
   end
 end
 
-local volar_cmd = {'cmd.exe', '/C', 'volar-server', '--stdio'}
+local volar_cmd = {'cmd.exe', '/C', 'vue-language-server', '--stdio'}
 local volar_root_dir = lspconfig_util.root_pattern 'package.json'
 
 lspconfig_configs.volar_api = {
@@ -102,7 +103,7 @@ lspconfig_configs.volar_api = {
     filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
     init_options = {
       typescript = {
-        serverPath = ''
+        serverPath = 'c:/Users/Jui/AppData/Roaming/npm/node_modules/typescript/lib/tsserverlibrary.js'
       },
       languageFeatures = {
         references = true,
@@ -138,7 +139,8 @@ lspconfig_configs.volar_doc = {
     filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
     init_options = {
       typescript = {
-        serverPath = ''
+        -- serverPath = ''
+        serverPath = 'c:/Users/Jui/AppData/Roaming/npm/node_modules/typescript/lib/tsserverlibrary.js'
       },
       languageFeatures = {
         documentHighlight = true,
@@ -165,7 +167,8 @@ lspconfig_configs.volar_html = {
     filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
     init_options = {
       typescript = {
-        serverPath = ''
+        -- serverPath = ''
+        serverPath = 'C:/Users/Jui/AppData/Roaming/npm/node_modules/typescript/lib/tsserverlibrary.js'
       },
       documentFeatures = {
         selectionRange = true,

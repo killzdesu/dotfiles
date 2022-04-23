@@ -15,7 +15,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Insert mode shortcut
-imap ;; <Esc>A;<Esc>
+" imap ;; <Esc>A;<Esc>
 
 nnoremap B ^
 nnoremap E $
