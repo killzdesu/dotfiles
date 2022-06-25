@@ -22,6 +22,9 @@ source ~/.vim/plugins/fzf.vim
 source ~/.vim/plugins/tree.vim
 " source ~/.vim/plugins/colorizer.vim
 
+" ==== Languages  ====
+source ~/.vim/plugins/rust-lang.vim
+
 if has('nvim')
   source ~/.vim/nvim-plugins.vim
 endif
