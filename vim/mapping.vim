@@ -5,7 +5,7 @@ let mapleader = "\\"
 nmap <leader>ve :e $MYVIMRC<CR>
 nmap <leader>vr :source $MYVIMRC<CR>
 map <C-c> <Esc>
-nmap <silent> <leader><Space> :let @/ = ""<CR>
+nmap <silent> <leader><Space> :noh<CR>
 
 
 map <silent>gf :edit <cfile><CR>

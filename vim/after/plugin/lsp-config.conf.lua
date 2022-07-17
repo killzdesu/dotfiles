@@ -161,6 +161,7 @@ lspconfig_configs.volar_api = {
         serverPath = 'c:/Users/Jui/AppData/Roaming/npm/node_modules/typescript/lib/tsserverlibrary.js'
       },
       languageFeatures = {
+        implementation = true,
         references = true,
         definition = true,
         typeDefinition = true,
@@ -179,6 +180,13 @@ lspconfig_configs.volar_api = {
         },
       }
     },
+    settings = {
+      css = {
+        lint = {
+          unknownAtRules = 'ignore',
+        }
+      }
+    }
   }
 }
 lspconfig.volar_api.setup{}
