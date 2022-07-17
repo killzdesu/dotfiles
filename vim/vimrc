@@ -2,11 +2,6 @@ source ~/.vim/settings.vim
 source ~/.vim/mapping.vim
 source ~/.vim/guis.vim
 
-" ===== Neovim config =====
-if has('nvim')
-  " set clipboard^=unnamed,unnamedplus
-endif
-
 " ===== Plugins =====
 "
 call plug#begin()
@@ -20,14 +15,11 @@ source ~/.vim/plugins/quick-scope.vim
 source ~/.vim/plugins/statusline.vim
 source ~/.vim/plugins/fzf.vim
 source ~/.vim/plugins/tree.vim
+source ~/.vim/plugins/motion.vim
 " source ~/.vim/plugins/colorizer.vim
 
 " ==== Languages  ====
-source ~/.vim/plugins/rust-lang.vim
-
-if has('nvim')
-  source ~/.vim/nvim-plugins.vim
-endif
+" source ~/.vim/plugins/rust-lang.vim
 
 " Colorscheme of choice
 source ~/.vim/plugins/dracula.vim

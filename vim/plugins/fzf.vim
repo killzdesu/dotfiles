@@ -1,4 +1,4 @@
- let f_cmd = 'rg "" --no-ignore-vcs -l -g !**/node_modules/* -g !**/.git/*'
+ let f_cmd = 'rg --hidden -g "!**/node_modules/*" -g "!**/.git/*" --files'
 if !has("nvim")
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
