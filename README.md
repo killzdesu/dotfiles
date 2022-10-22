@@ -2,6 +2,11 @@
 For remote vim/neovim config
 
 # How to use
+## Using install script
+For bash shell script run `install.sh` for install dotfiles
+
+_may need to config permission before running install script_
+
 ## Vim
 1. Clone this repo and move `vim` to `~/.vim`
 2. if you're using Windows, make sure to symlink to **vimfiles**
