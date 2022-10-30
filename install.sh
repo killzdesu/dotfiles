@@ -1,6 +1,6 @@
 #! /bin/bash
 
-echo "Applying dotfiles"
+echo "Installing dotfiles"
 mkdir -p ~/.config
 echo "Copying neovim config..."
 cp -r ./nvim ~/.config/
