@@ -36,6 +36,7 @@ local options = {
 }
 
 vim.opt.shortmess:append "c"
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 
 for k, v in pairs(options) do
   vim.opt[k] = v
