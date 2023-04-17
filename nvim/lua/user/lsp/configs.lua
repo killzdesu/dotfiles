@@ -1,5 +1,9 @@
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not status_ok then
+local installer_ok, lsp_installer = pcall(require, "mason-lspconfig")
+if not installer_ok then
+	return
+end
+local mason_ok, mason = pcall(require, "mason")
+if not mason_ok then
 	return
 end
 
@@ -7,6 +11,13 @@ local lspconfig = require("lspconfig")
 
 local servers = { "jsonls", "lua_ls", "volar", "tailwindcss" }
 
+mason.setup {
+  ui = {
+    icons = {
+      package_installed = "✓"
+    }
+  }
+}
 lsp_installer.setup({
 	ensure_installed = servers,
 })
