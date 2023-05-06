@@ -57,21 +57,16 @@ return packer.startup(function(use)
 
 	use "numToStr/Comment.nvim"
 	use "JoosepAlviste/nvim-ts-context-commentstring"
-
 	use({ "kyazdani42/nvim-web-devicons"})
 	use({ "kyazdani42/nvim-tree.lua"})
 	use({ "akinsho/bufferline.nvim"})
 	use({ "moll/vim-bbye"})
 	use({ "nvim-lualine/lualine.nvim"})
---	use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
-	-- use({ "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f" })
 	use({ "lukas-reineke/indent-blankline.nvim"})
---	use("folke/which-key.nvim")
   use 'ggandor/lightspeed.nvim'
 
 	-- Colorschemes
   use 'Mofiqul/dracula.nvim'
-	-- use("lunarvim/darkplus.nvim")
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp"}) -- The completion plugin
@@ -87,7 +82,6 @@ return packer.startup(function(use)
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig"}) -- enable LSP
-	--[[ use({ "williamboman/nvim-lsp-installer"}) -- Switch to mason.nvim ]]
   use { "williamboman/mason.nvim" }
   use { "williamboman/mason-lspconfig.nvim" }
 	use({ "jose-elias-alvarez/null-ls.nvim"}) -- for formatters and linters
