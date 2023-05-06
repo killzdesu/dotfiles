@@ -31,4 +31,4 @@ configs.setup({
 	indent = { enable = true, disable = { "python", "css" } },
 })
 
-require 'nvim-treesitter.install'.compilers = { "clang" }
+require 'nvim-treesitter.install'.compilers = { "gcc" }

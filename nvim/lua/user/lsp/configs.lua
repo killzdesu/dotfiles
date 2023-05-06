@@ -22,7 +22,17 @@ lsp_installer.setup({
 	ensure_installed = servers,
 })
 
-for _, server in pairs(servers) do
+local installed_servers = require("mason-registry").get_installed_package_names()
+local server_mapping = lsp_installer.get_mappings().mason_to_lspconfig
+--[[ for _, s in pairs(installed_servers) do ]]
+--[[   print(server_mapping[s]) ]]
+--[[ end ]]
+
+--[[ ## use ensure_installed for server configuration ]]
+--[[ for _, server in pairs(servers) do ]]
+--[[ ## use installed server for server configuration ]]
+for _, server_package in pairs(installed_servers) do
+  local server = server_mapping[ server_package ]
 	local opts = {
 		on_attach = require("user.lsp.handlers").on_attach,
 		capabilities = require("user.lsp.handlers").capabilities,
