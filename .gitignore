@@ -4,3 +4,6 @@ vim/plugged/**
 
 tmp
 tmp/**
+
+ignore
+ignore/**
