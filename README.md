@@ -1,5 +1,6 @@
 # killz's personal dotfiles
 For remote vim/neovim config
+ - 19/05/23 : updated to use `lazy.nvim` with `mason.nvim`
 
 # How to use
 ## Using install script
