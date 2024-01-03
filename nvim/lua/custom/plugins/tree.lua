@@ -8,8 +8,6 @@ return {
     { "<C-n>", ":NvimTreeToggle<CR>", noremap = true, silent = true },
   },
   config = function()
-    local nvim_tree_config = require("nvim-tree.config")
-    local tree_cb = nvim_tree_config.nvim_tree_callback
     -- On attach function which replaces view.mappings
     local function on_attach(bufnr)
       local api = require("nvim-tree.api")
