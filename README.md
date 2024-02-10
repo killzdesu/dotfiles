@@ -1,6 +1,7 @@
 # killz's personal dotfiles
 For remote vim/neovim config
  - 19/05/23 : updated to use `lazy.nvim` with `mason.nvim`
+ - 10/02/24 : add `leap.nvim`
 
 # How to use
 ## Using install script
@@ -21,7 +22,8 @@ if you've not done this, make sure to config find_command in `fzf.vim`
 1. Clone this repo and move `nvim` to `~/.config/nvim`
 2. if you're using Windows, make sure to symlink to **~/AppData/Local/nvim**
 `mklink /D ~/.config/nvim nvim`
-3. run `:PackerSync` in nvim
+3. run `:Lazy restore` in nvim (will use lazy-lock.json version) 
+   or `:Lazy install` to install & update all plugins (may have breaking changes)
 
 # Environment Setup
 For Windows suggest using [scoop](https://scoop.sh) for command line installer

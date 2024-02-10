@@ -18,7 +18,7 @@ return {
   -- Split-Join plugin
   {
     'Wansmer/treesj',
-    keys = { '<space>j', '<space>m', '<space>s' },
+    keys = { '<space>m', '<space>j', '<space>s' },
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     opts = {},
   },
