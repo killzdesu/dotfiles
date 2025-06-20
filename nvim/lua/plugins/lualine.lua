@@ -1,7 +1,7 @@
 return {
   -- Set lualine as statusline
   'nvim-lualine/lualine.nvim',
-  -- See `:help lualine.txt`
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     options = {
       theme = 'auto',
@@ -15,7 +15,7 @@ return {
       lualine_b = {'mode'},
       lualine_c = {'filename'},
       lualine_x = {'encoding', 'filetype'},
-      lualine_y = {'progress'},
+      lualine_y = {'lsp_status'},
       lualine_z = {'location'}
     },
   },

@@ -1,23 +1,32 @@
 return {
+  -- Autopairs
   {
     "windwp/nvim-autopairs",
-    config = function()
-      require("nvim-autopairs").setup {}
-    end,
+    event = "InsertEnter",
+    opt = {}
   },
+
+  -- Autotag plugin
+  -- {
+  --   "windwp/nvim-ts-autotag",
+  --   event = {"BufReadPre", "BufNewFile"},
+  --   opts={ }
+  -- },
+
+  -- Surround
   {
     "kylechui/nvim-surround",
-    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    version = "^3.0", -- Use for stability; omit to use `main` branch for the latest features
     event = {"BufReadPre", "BufNewFile"},
     config = function()
       require("nvim-surround").setup()
     end
   },
-  -- Autotag plugin
-  { "windwp/nvim-ts-autotag", event = { "InsertEnter" }, opts={ } },
+
   -- Split-Join plugin
   {
     'Wansmer/treesj',
+    event = "VeryLazy",
     keys = { '<space>m', '<space>j', '<space>s' },
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     opts = {},
